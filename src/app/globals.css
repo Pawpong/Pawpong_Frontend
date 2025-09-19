@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --text-display
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -14,7 +15,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
+  --color-primary: #4f3b2e;
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -39,7 +40,125 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --grayscale-black: #1f1f1f;
+  --grayscale-gray7: #343434;
+  --grayscale-gray6: #545454;
+  --grayscale-gray5: #888888;
+  --grayscale-gray4: #a0a0a0;
+  --grayscale-gray3: #cccccc;
+  --grayscale-gray2: #e1e1e1;
+  --grayscale-gray1: #f5f5f5;
+  --grayscale-white: #ffffff;
+  --point-basic: #a0c8f4;
+  --point-dark: #4e9cf1;
+  --branding-bg: #f6f6ea;
 }
+
+
+/* PC (min-width: 1280px) */
+@media (min-width: 1280px) {
+  @theme {
+  --text-display: --spacing(12);
+  --text-display--line-height: --spacing(16); 
+  --text-display--font-weight:  600; 
+
+  --text-heading-1: --spacing(10);
+  --text-heading-1--line-height: --spacing(15);
+  --text-heading-1--font-weight: 600;
+
+  --text-heading-2: --spacing(8);
+  --text-heading-2--line-height: --spacing(12);
+  
+  --text-heading-3: --spacing(6);
+  --text-heading-3--line-height: --spacing(9);
+  
+  --text-body-l: --spacing(5);
+  --text-body-1--line-height: --spacing(8);
+
+  --text-body-m: --spacing(4.5);
+  --text-body-m--line-height: --spacing(7);
+
+  --text-body-s: --spacing(4);
+  --text-body-s--line-height: --spacing(6);
+
+  --text-body-xs: --spacing(3.5);
+  --text-body-xs--line-height: --spacing(5);
+
+  --text-caption-s: --spacing(3);
+  --text-caption-s--line-height: --spacing(3);
+  }
+}
+
+/* 태블릿 (min-width: 768px) */
+@media (min-width: 768px) {
+  @theme {
+  --text-display: --spacing(10);
+  --text-display--line-height: --spacing(14); 
+  --text-display--font-weight:  600; 
+
+  --text-heading-1: --spacing(8);
+  --text-heading-1--line-height: --spacing(12);
+  --text-heading-1--font-weight: 600;
+
+  --text-heading-2: --spacing(7);
+  --text-heading-2--line-height: --spacing(10);
+  
+  --text-heading-3: --spacing(5); 
+  --text-heading-3--line-height: --spacing(8);
+  
+  --text-body-l: --spacing(5);
+  --text-body-1--line-height: --spacing(8);
+
+  --text-body-m: --spacing(4.5);
+  --text-body-m--line-height: --spacing(7);
+
+  --text-body-s: --spacing(4);
+  --text-body-s--line-height: --spacing(6);
+
+  --text-body-xs: --spacing(3.5);
+  --text-body-xs--line-height: --spacing(5);
+
+  --text-caption-s: --spacing(3);
+  --text-caption-s--line-height: --spacing(3);
+  }
+}
+
+
+/* 모바일 (기본) */
+@theme {
+  --text-display: --spacing(8); 
+  --text-display--line-height: --spacing(11); 
+  --text-display--font-weight:  600; 
+
+  --text-heading-1: --spacing(7);
+  --text-heading-1--line-height: --spacing(10);
+  --text-heading-1--font-weight: 600;
+
+  --text-heading-2: --spacing(6);
+  --text-heading-2--line-height: --spacing(9);
+  
+  --text-heading-3: --spacing(4.5); 
+  --text-heading-3--line-height: --spacing(7);
+  
+  --text-body-l: --spacing(4.5);
+  --text-body-1--line-height: --spacing(7);
+
+  --text-body-m: --spacing(4);
+  --text-body-m--line-height: --spacing(6);
+
+  --text-body-s: --spacing(3.5);
+  --text-body-s--line-height: --spacing(5.5);
+
+  --text-body-xs: --spacing(3);
+  --text-body-xs--line-height: --spacing(5.5);
+
+  --text-caption-s: --spacing(2.75);
+  --text-caption-s--line-height: --spacing(2.75 );
+  
+}
+
+
+
 
 :root {
   --radius: 0.625rem;
